@@ -1,0 +1,86 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { useGenerateAudioMutation } from "@/entities/api/productApi";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+import React, { FC, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+
+const formSchema = z.object({
+  prompt: z.string().min(2, {
+    message: "Username must be at least 2 characters.",
+  }),
+});
+
+interface IProductAudioFormProps {}
+
+const ProductAudioForm: FC<IProductAudioFormProps> = ({}) => {
+  const [audio, setAudio] = useState<string>();
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      prompt: "",
+    },
+  });
+
+  const [generateAudio, { isSuccess, data, isLoading }] =
+    useGenerateAudioMutation();
+
+  useEffect(() => {
+    if (isSuccess && data) {
+      setAudio(data.url);
+    }
+  }, [isSuccess, data]);
+
+  const onSubmit = (values: z.infer<typeof formSchema>) => {
+    setAudio(undefined);
+    generateAudio({
+      prompt: values.prompt,
+    });
+    form.reset();
+  };
+
+  return (
+    <div className="px-4 md:w-[70%] md:mx-auto">
+      <div>
+        {audio && (
+          <audio controls className="w-full">
+            <source src={audio} type="audio/mpeg" />
+          </audio>
+        )}
+        {!audio && <div>wygenerujmy razem coś nowego :)</div>}
+      </div>
+      {isLoading && <div>Loading...</div>}
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="flex flex-col gap-2"
+        >
+          <FormField
+            control={form.control}
+            name="prompt"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl>
+                  <Input
+                    placeholder="Zacznij od najważniejszego ;)"
+                    {...field}
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+          <Button type="submit" className="w-full">
+            Wysłać
+          </Button>
+        </form>
+      </Form>
+    </div>
+  );
+};
+
+export default ProductAudioForm;
