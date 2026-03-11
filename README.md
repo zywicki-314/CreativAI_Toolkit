@@ -25,3 +25,9 @@ Kompleksowa platforma SaaS wykorzystująca sztuczną inteligencję do generowani
 
 ## 🏗 Architektura
 Projekt został zaprojektowany z myślą o skalowalności, wykorzystując **Server Actions** do bezpiecznej komunikacji z API oraz **Edge Runtime** dla szybszego renderowania treści AI.
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/95b9254e-46f9-458f-906b-d5e1ec191dd8" alt="Demo AI Platform" width="600">
+  <p><i>Krótki opis tego, co widać na animacji</i></p>
+</div>
+![Video Project](https://github.com/user-attachments/assets/95b9254e-46f9-458f-906b-d5e1ec191dd8)
+
