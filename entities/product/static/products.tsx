@@ -26,7 +26,7 @@ export const PRODUCTS: IProductUI[] = [
   },
   {
     title: "Image Generate",
-    description: "Szukasz obrazek? - Zrób swój urzywając AI",
+    description: "Szukasz grafiki? - Zrób swóją urzywając AI",
     icon: <Image />,
     color: "text-yellow-700",
     link: ROUTES.cabinet.image,

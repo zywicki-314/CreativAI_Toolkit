@@ -68,7 +68,7 @@ const ProductCodeForm: FC<IProductCodeFormProps> = ({}) => {
       <ScrollArea className=" h-[65vh]">
         <div className="text-sm flex flex-col gap-3  p-4 rounded bg-blue-100">
           {!messages.length &&
-            '"ai-helper 360" chętnie odpowie na każde twoje pytanie. Nad czym teraz się zastanawiasz?'}
+            '"CreativAI Toolkit 360" chętnie odpowie na każde twoje pytanie. Czego potrzebujesz?'}
           {messages.map((message, idx) => (
             <div key={`message${idx}`} className="flex gap-3">
               <div>
