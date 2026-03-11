@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI SaaS Platform – Multi-functional Generator
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=next.js)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
+![OpenAI](https://img.shields.io/badge/OpenAI-API-412991?style=for-the-badge&logo=openai)
 
-First, run the development server:
+## 🚀 Live Demo
+[LINK DO TWOJEJ APLIKACJI (np. Vercel)]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📝 Opis Projektu
+Kompleksowa platforma SaaS wykorzystująca sztuczną inteligencję do generowania różnorodnych treści. Aplikacja została zbudowana w oparciu o najnowsze standardy Next.js 14, kładąc nacisk na wydajność (Server Components) oraz bezpieczeństwo kluczy API.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Kluczowe Funkcje
+- **Text Generation:** Zaawansowany czat oparty na modelach OpenAI.
+- **Image & Video Generation:** Integracja z Replicate API do tworzenia multimediów.
+- **Code Generation:** Asystent programisty optymalizujący fragmenty kodu.
+- **Audio Synthesis:** Konwersja tekstu na mowę.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠 Stos Technologiczny
+- **Framework:** Next.js 14 (App Router)
+- **Stylizacja:** Tailwind CSS + ShadcnUI
+- **Baza Danych:** Prisma + MongoDB/PostgreSQL
+- **State Management:** Redux Toolkit / React Hooks
+- **Integracje:** OpenAI API, Replicate API, Clerk (Authentication)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏗 Architektura
+Projekt został zaprojektowany z myślą o skalowalności, wykorzystując **Server Actions** do bezpiecznej komunikacji z API oraz **Edge Runtime** dla szybszego renderowania treści AI.
